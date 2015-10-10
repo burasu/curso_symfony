@@ -42,3 +42,11 @@ curso_main_updateProd:
 curso_main_borraProd:
     path:     /productos/delete/{id}
     defaults: { _controller: CursoMainBundle:Product:delete }
+    
+curso_main_newProd:
+    path:     /productos/nuevoProducto
+    defaults: { _controller: CursoMainBundle:Product:nuevoProducto }
+    
+curso_main_editProd:
+    path:     /productos/editProducto/{id}
+    defaults: { _controller: CursoMainBundle:Product:editProducto }

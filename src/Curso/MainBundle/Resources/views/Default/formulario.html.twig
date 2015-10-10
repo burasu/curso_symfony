@@ -1,0 +1,32 @@
+{% extends "::base.html.twig" %}
+
+{% block cabecero_block %}
+<img src="{{ asset("bundles/cursomain/images/logo.jpg") }}" width="50px" />
+{% endblock %}
+
+{% block body %}
+
+{# {{ form(form) }} #}
+{{ form_start(form) }}
+
+	<div class="form_error">{{ form_errors(form) }}</div>
+	
+	<div class="form_bloque">
+	<div class="form_error">{{ form_errors(form.nombre) }}</div>
+	<div class="form_label">{{ form_label(form.nombre) }}</div>
+	<div class="form_input">{{ form_widget(form.nombre) }}</div>
+	</div>
+	
+	<div class="form_bloque">
+	<div class="form_error">{{ form_errors(form.precio) }}</div>
+	<div class="form_label">{{ form_label(form.precio) }}</div>
+	<div class="form_input">{{ form_widget(form.precio) }}</div>
+	</div>
+	
+	<div class="form_bloque">
+	{{ form_widget(form.Guardar) }}
+	</div>
+
+{{ form_end(form) }}
+
+{% endblock %}
